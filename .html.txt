@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te Extraño Mi Duendecita</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="carta" id="carta" onclick="mostrarMensaje()">
+            <p id="mensaje" class="mensaje oculto">Te extraño mi duendecita</p>
+            <p class="texto">Haz clic aquí</p>
+        </div>
+        <div class="respuesta-container">
+            <textarea id="respuesta" class="respuesta" placeholder="Escribe tu respuesta aquí..."></textarea>
+            <button class="boton-respuesta" onclick="enviarRespuesta()">Enviar</button>
+            <p id="respuestaMensaje" class="respuesta-mensaje oculto"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

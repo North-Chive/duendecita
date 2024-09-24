@@ -1,0 +1,29 @@
+function mostrarMensaje() {
+    const mensaje = document.getElementById('mensaje');
+    mensaje.classList.remove('oculto');
+    
+    // Hacer que el mensaje aparezca
+    setTimeout(() => {
+        mensaje.style.opacity = 1; // Cambia la opacidad para mostrar el mensaje
+    }, 10);
+}
+
+function enviarRespuesta() {
+    const respuestaInput = document.getElementById('respuesta');
+    const respuestaMensaje = document.getElementById('respuestaMensaje');
+    
+    if (respuestaInput.value.trim() !== "") {
+        respuestaMensaje.textContent = `Tu respuesta: ${respuestaInput.value}`;
+        respuestaMensaje.classList.remove('oculto');
+        
+        // Hacer que el mensaje de respuesta aparezca
+        setTimeout(() => {
+            respuestaMensaje.style.opacity = 1; // Cambia la opacidad para mostrar la respuesta
+        }, 10);
+        
+        // Limpiar el campo de texto
+        respuestaInput.value = "";
+    } else {
+        alert("Por favor, escribe una respuesta.");
+    }
+}
